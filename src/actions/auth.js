@@ -17,7 +17,7 @@ export const login = (credentials) => (dispatch) =>
 
 export const logout = () => (dispatch) => 
 {
-    console.log("Logout");
+    
     localStorage.removeItem('bookwormJWT');
     dispatch(userLoggedOut())
 };

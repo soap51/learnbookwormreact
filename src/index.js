@@ -7,7 +7,7 @@ import thunk from 'redux-thunk';
 import {composeWithDevTools} from 'redux-devtools-extension';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
-import {BrowserRouter} from 'react-router-dom';
+import {BrowserRouter , Route} from 'react-router-dom';
 import rootReducer from './rootReducer';
 import {userLoggedIn} from './actions/auth';
 const store = createStore(
@@ -21,7 +21,7 @@ if(localStorage.bookwormJWT){
 ReactDOM.render(
 <BrowserRouter>
 <Provider store={store} >
-<App />
+<Route component={App}/>
 </Provider>
 </BrowserRouter>, document.getElementById('root'));
 registerServiceWorker();
